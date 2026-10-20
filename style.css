@@ -3,16 +3,18 @@
    1. GLOBAL SETTINGS
 ================================= */
 
+
 :root {
-  --bg: #0b1120;
-  --surface: #131e32;
-  --surface-hover: #1c2b43;
-  --text: #f1f5f9;
-  --muted: #a7b4c8;
-  --primary: #60a5fa;
-  --primary-dark: #2563eb;
-  --border: #29384f;
+  --bg: #17152e;
+  --surface: #242044;
+  --surface-hover: #352c5c;
+  --text: #fff7ed;
+  --muted: #d1cbe8;
+  --primary: #5eead4;
+  --primary-dark: #7c3aed;
+  --border: #514477;
 }
+
 
 * {
   margin: 0;
@@ -28,6 +30,17 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--bg);
+  background-image:
+  linear-gradient(
+    rgba(11, 17, 32, 0.78),
+    rgba(11, 17, 32, 0.78)
+  ),
+  url("VENTI-samurai.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
   color: var(--text);
   line-height: 1.7;
   transition: background 0.3s, color 0.3s;
@@ -151,21 +164,23 @@ header {
    4. BUTTONS
 ================================= */
 
+
 .button {
   display: inline-block;
-  background: var(--primary-dark);
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
   color: #ffffff;
-  border: 1px solid var(--primary-dark);
-  border-radius: 8px;
+  border: none;
+  border-radius: 10px;
   padding: 12px 22px;
   font-weight: bold;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.2s, filter 0.2s;
 }
 
 .button:hover {
-  background: #1d4ed8;
-  transform: translateY(-2px);
+  filter: brightness(1.15);
+  transform: translateY(-3px);
 }
+
 
 /* =================================
    5. GENERAL SECTIONS
@@ -214,13 +229,16 @@ header {
 }
 
 .project-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: linear-gradient(
+    145deg,
+    #29234d,
+    #242044
+  );
+  border: 1px solid #514477;
   border-radius: 14px;
   padding: 26px;
   transition: transform 0.2s, border-color 0.2s;
 }
-
 .project-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary);
@@ -284,16 +302,15 @@ button:focus-visible {
 ================================= */
 
 body.light-theme {
-  --bg: #f8fafc;
+  --bg: #fff7ed;
   --surface: #ffffff;
-  --surface-hover: #e2e8f0;
-  --text: #172033;
-  --muted: #475569;
-  --primary: #1d4ed8;
-  --primary-dark: #1d4ed8;
-  --border: #cbd5e1;
+  --surface-hover: #f3e8ff;
+  --text: #292044;
+  --muted: #625779;
+  --primary: #7c3aed;
+  --primary-dark: #6d28d9;
+  --border: #e9d5ff;
 }
-
 /* =================================
    10. RESPONSIVE DESIGN
 ================================= */
@@ -385,3 +402,4 @@ body.light-theme {
     transition: none;
   }
 }
+
